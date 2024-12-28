@@ -12,14 +12,15 @@ public class DemoJDBCSample {
         String url = "jdbc:postgresql://localhost:5432/demo";
         String userName  = "postgres";
         String password  = "0000";
-        String sqlQuery = "insert into students values (3, 'Jon', 48)";
+        //String insertQuery = "insert into students values (3, 'Jon' , 48)";
+        String updateQuery = "update students set sname = 'Juliet' where sid = 1";
         Connection connection = DriverManager.getConnection(url, userName, password);
         //Create a statement to fetch data from Postgres Db
         // 1. create a reference to the statement for later execution
         Statement statement = connection.createStatement();
-
         //it has added a user info
-        boolean status = statement.execute(sqlQuery);
+       // boolean insertStatus = statement.execute(insertQuery);
+        boolean updateStatus = statement.execute(updateQuery);
         //close connection
         connection.close();
 
