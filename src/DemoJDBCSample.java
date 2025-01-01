@@ -11,7 +11,7 @@ public class DemoJDBCSample {
         //Connect app to DB
         String url = "jdbc:postgresql://localhost:5432/demo";
         String userName  = "postgres";
-        String password  = "0000";
+        String password  = "";
         //String insertQuery = "insert into students values (3, 'Jon' , 48)";
         String updateQuery = "update students set sname = 'Juliet' where sid = 1";
         Connection connection = DriverManager.getConnection(url, userName, password);
